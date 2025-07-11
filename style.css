@@ -26,7 +26,6 @@
      flex-direction: column;
      justify-content: center;
      overflow: hidden;
-     background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
      padding: 2rem;
  }
 
@@ -43,7 +42,7 @@
  .hero-text {
      flex: 1 1 50%;
      padding: 2rem;
-     color: white;
+     color: black;
  }
 
  .hero-image-container {
@@ -82,8 +81,8 @@
 
  .cta-button {
      display: inline-block;
-     background-color: white;
-     color: #5e72e4;
+     background-color: black;
+     color: white;
      padding: 0.75rem 1.5rem;
      border-radius: 50px;
      font-weight: 600;
