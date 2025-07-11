@@ -1,4 +1,4 @@
-<script>
+
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.header-nav').classList.toggle('active');
         });
@@ -88,4 +88,3 @@
             checkScroll(); // Trigger on load if already in view
         });
             
-    </script>
