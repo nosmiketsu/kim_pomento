@@ -151,6 +151,7 @@
      cursor: pointer;
  }
 
+
  @media (max-width: 768px) {
      header {
          padding: 1rem;
@@ -195,11 +196,6 @@
          padding: 1rem;
      }
 
-     .hire-me h3 {
-         text-transform: uppercase;
-         font-size: 1em;
-         font-weight: 800;
-     }
 
      .hero-image-container {
          flex: 1 1 100%;
@@ -219,6 +215,13 @@
      .hero-image {
          transform: none;
      }
+ }
+
+
+ .hire-me {
+     text-transform: uppercase;
+     font-size: 1em;
+     font-weight: 800;
  }
 
  /* USPS Grid Section */
