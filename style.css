@@ -364,10 +364,6 @@
      .carousel-item .momstir-text {
          font-size: 2rem;
      }
-
-     #slide4 #slide5 {
-         display: block;
-     }
  }
 
  @media (max-width: 400px) {
