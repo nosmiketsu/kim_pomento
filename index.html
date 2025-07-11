@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Services - Grow Your E-commerce Business</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #3b82f6;
+            --color-secondary: #6366f1;
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+        }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 90vh;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+            padding: 2rem;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .hero-text {
+            flex: 1 1 50%;
+            padding: 2rem;
+            color: white;
+        }
+
+        .hero-image-container {
+            flex: 1 1 50%;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: all 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #5e72e4;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: #5e72e4;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .logo img {
+            height: 100%;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #5e72e4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #825ee4;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #5e72e4;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                padding: 1rem;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero {
+                min-height: 70vh;
+                text-align: center;
+                padding: 4rem 1rem;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                flex: 1 1 100%;
+                padding: 1rem;
+            }
+
+            .hero-image-container {
+                flex: 1 1 100%;
+                padding: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin: 0 auto 1.5rem;
+                max-width: 100%;
+            }
+
+            .hero-image {
+                transform: none;
+            }
+        }
+        /* USPS Grid Section */
+        .usps-section {
+            padding: 4rem 2rem;
+            background: white;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .usps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .usp-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .usp-item h3 {
+            margin: 1rem 0;
+            color: #5e72e4;
+        }
+
+        .usp-icon {
+            font-size: 2.5rem;
+            color: #5e72e4;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .usps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                overflow-x: auto;
+                grid-auto-flow: column;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .usp-item {
+                scroll-snap-align: start;
+                min-width: 80%;
+            }
+        }
+
+        /* Carousel Section */
+
+        .carousel-section {
+      width: 100%;
+      max-width: 100%;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+      position: relative;
+      user-select: none;
+    }
+    /* Container for logos */
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      max-width: 100%;
+      height: 120px;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+      width: 100%;
+    }
+    .carousel-item {
+      flex: 0 0 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0.5rem;
+      cursor: default;
+    }
+    /* Logo images and text logos */
+    .carousel-item img,
+    .carousel-item svg {
+      max-height: 85px;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .carousel-item .momstir-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #000;
+      white-space: nowrap;
+      user-select: none;
+    }
+    /* Dots container */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.75rem;
+      gap: 0.7rem;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #bbb;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .carousel-dot.active {
+      background-color: #333;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .carousel-container {
+        height: 90px;
+      }
+      .carousel-item {
+        flex: 0 0 50%;
+        padding: 0 0.25rem;
+      }
+      .carousel-item img,
+      .carousel-item svg {
+        max-height: 65px;
+      }
+      .carousel-item .momstir-text {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 400px) {
+      .carousel-item {
+        flex: 0 0 100%;
+      }
+    }
+
+/* Services Section */
+
+.service-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+            font-size: 1.75rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.15);
+        }
+        
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+        }
+
+        .max-w-7xl {
+            max-width: 100%!important;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a7e5cade-fd1a-4c1b-a31b-73747f3634d8.png" alt="Shopify Services Logo">
+            Shopify Services
+        </a>
+        <button class="mobile-menu-btn">☰</button>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Expert Shopify Services to Grow Your Online Store</h1>
+                <p>Maximize your e-commerce potential with our tailored Shopify solutions. From store setup to theme customization, we help businesses thrive online.</p>
+                <a href="#contact" class="cta-button">Get Started Today</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e200ac4f-aca7-444e-a7fd-1861244f3c46.png" 
+                     alt="Shopify store dashboard showing analytics charts with a laptop and coffee cup on a modern desk" 
+                     class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="usps-section">
+        <div class="usps-grid">
+            <div class="usp-item">
+                <div class="usp-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Trusted Partner</h3>
+                <p>100+ Shopify stores rely on our expertise</p>
+            </div>
+            <div class="usp-item">
+                <div class="usp-icon"><i class="fas fa-headset"></i></div>
+                <h3>Dedicated Support</h3>
+                <p>24/7 customer service for your peace of mind</p>
+            </div>
+            <div class="usp-item">
+                <div class="usp-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Proven Results</h3>
+                <p>Consistently delivering growth for e-commerce stores</p>
+            </div>
+            <div class="usp-item">
+                <div class="usp-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Shopify Experts</h3>
+                <p>Certified specialists in platform development</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel-section" aria-label="Brands Carousel">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack" role="list">
+            <div class="carousel-item" role="listitem" aria-label="Upside">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6369c66c-47fc-4377-a5dd-d45bfd9616af.png" alt="Logo of the company Upside with a green arrow forming the letter U upright" loading="lazy" onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a5912bf2-bf6b-40d8-bdfa-a3c78b29f8d9.png'"/>
+            </div>
+            <div class="carousel-item" role="listitem" aria-label="Varify">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6759dd4f-469a-4799-8ece-8429254e48c0.png" alt="Blue stylized text logo of Varify brand with smooth rounded fonts" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/140x85?text=Logo+not+found'"/>
+            </div>
+            <div class="carousel-item" role="listitem" aria-label="Momstir">
+              <span class="momstir-text" aria-hidden="true">Momstir</span>
+            </div>
+            <div class="carousel-item" role="listitem" aria-label="Crayon King">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/18d026df-f09b-4df0-9444-48a72e025397.png" alt="Navy blue crown logo symbolizing Crayon King brand with classic clean design" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/140x85?text=Logo+not+found'"/>
+            </div>
+            <div class="carousel-item" role="listitem" aria-label="Pure Mountain Botanicals">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c2d710b4-05cf-4b2a-9cf5-22ccb3f354a5.png" alt="Green and blue mountain icon with text Pure Mountain Botanicals - natural botanical products brand" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/140x85?text=Logo+not+found'"/>
+            </div>
+          </div>
+        </div>
+        <nav class="carousel-dots" aria-label="Carousel Navigation">
+          <button class="carousel-dot active" aria-label="Slide 1" aria-current="true" data-slide="0"></button>
+          <button class="carousel-dot" aria-label="Slide 2" data-slide="1"></button>
+          <button class="carousel-dot" aria-label="Slide 3" data-slide="2"></button>
+        </nav>
+      </section>
+
+
+      <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    We offer a comprehensive range of services designed to meet your needs and exceed your expectations.
+                </p>
+            </div>
+            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl p-8 flex flex-col items-center text-center">
+                    <div class="service-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Shopify Theme Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Custom web solutions built with modern technologies to drive your business forward.
+                    </p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5f0a8be1-9a22-4e1d-a71f-1fcc1d62dfef.png" alt="Developers collaborating on a modern web application with code visible on screens" class="w-full rounded-lg mt-auto">
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl p-8 flex flex-col items-center text-center">
+                    <div class="service-icon w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Desktop and Mobile Friendly</h3>
+                    <p class="text-gray-600 mb-6">
+                        Cross-platform mobile applications that deliver seamless user experiences.
+                    </p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/db9348b4-526c-46a5-9185-0a3064cc9894.png" alt="Smartphones displaying beautifully designed mobile applications on colorful backgrounds" class="w-full rounded-lg mt-auto">
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl p-8 flex flex-col items-center text-center">
+                    <div class="service-icon w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">3rd-Party App Integration</h3>
+                    <p class="text-gray-600 mb-6">
+                        Data-driven strategies to boost your online presence and drive conversions.
+                    </p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4fecb696-781a-4c1b-9c74-49f1a4d6fc19.png" alt="Digital marketing dashboard showing analytics metrics and growth trends" class="w-full rounded-lg mt-auto">
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl p-8 flex flex-col items-center text-center">
+                    <div class="service-icon w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-6">
+                        Beautiful and intuitive interfaces crafted to enhance user engagement.
+                    </p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/12b849d9-6c73-4a29-8a53-40ad38fb3178.png" alt="Designer working on wireframes and mockups for a mobile application interface" class="w-full rounded-lg mt-auto">
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl p-8 flex flex-col items-center text-center">
+                    <div class="service-icon w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Shopify POS Integration</h3>
+                    <p class="text-gray-600 mb-6">
+                        Scalable cloud infrastructure to support your growing business needs.
+                    </p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c2080f9-9b8e-4ec7-a349-504ea6f1837f.png" alt="Server racks in a modern data center with blinking lights and network cables" class="w-full rounded-lg mt-auto">
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl p-8 flex flex-col items-center text-center">
+                    <div class="service-icon w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
+                    <p class="text-gray-600 mb-6">
+                        Dedicated support team available round-the-clock to assist you.
+                    </p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cda9ffef-fbfc-40a1-b829-4842e8018ed2.png" alt="Support team working at computers helping customers through various channels" class="w-full rounded-lg mt-auto">
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <button class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    View All Services
+                </button>
+            </div>
+        </div>
+    </section>
+
+<script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+
+// carousel section 
+        (function(){
+            const track = document.getElementById('carouselTrack');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const totalSlides = dots.length;
+            let currentIndex = 0;
+            let slideWidthPercent = 20; // Each slide 20% width on desktop view
+            // Adjust slide width % on smaller view - must match CSS breakpoints
+            function getSlideWidthPercent() {
+                if (window.innerWidth <= 400) return 100;
+                if (window.innerWidth <= 768) return 50;
+                return 20;
+            }
+            // Update slide position by transform
+            function goToSlide(index) {
+                const widthPercent = getSlideWidthPercent();
+                track.style.transform = `translateX(-${index * widthPercent}%)`;
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+                dots[index].setAttribute('aria-current', 'true');
+                dots.forEach((dot, idx) => {
+                if(idx !== index) dot.removeAttribute('aria-current');
+                });
+                currentIndex = index;
+            }
+            // Dot click event
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                goToSlide(parseInt(dot.dataset.slide));
+                });
+            });
+
+            // Optional: Auto-play functionality
+            let autoPlayInterval = null;
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(() => {
+                let nextIndex = (currentIndex + 1) % totalSlides;
+                goToSlide(nextIndex);
+                }, 4000);
+            }
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+            // Pause auto-play on mouse enter, resume on mouse leave
+            track.addEventListener('mouseenter', stopAutoPlay);
+            track.addEventListener('mouseleave', startAutoPlay);
+            // Initialize
+            goToSlide(0);
+            startAutoPlay();
+            // Update slide on window resize
+            window.addEventListener('resize', () => {
+                goToSlide(currentIndex);
+            });
+            })();
+            const carouselDots = document.querySelector('.carousel-dots');    
+
+// Services section
+            // Simple animation when scrolling to services
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            function checkScroll() {
+                serviceCards.forEach(card => {
+                    const cardPosition = card.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if(cardPosition < screenPosition) {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // Initial state
+            serviceCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+            
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); // Trigger on load if already in view
+        });
+            
+    </script>
+</body>
+</html>
