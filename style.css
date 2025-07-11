@@ -274,7 +274,8 @@
      padding: 1rem 1rem;
      position: relative;
      user-select: none;
-     background-color: black;
+     border-top: solid 1px black;
+     border-bottom: solid 1px black;
  }
 
  /* Container for logos */
@@ -442,4 +443,101 @@
  .max-w-7xl {
      max-width: 100% !important;
      margin: 0 auto;
+ }
+
+ /* Footer styles */
+ footer {
+     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+     color: white;
+     padding: 2.5rem 0;
+     margin-top: auto;
+ }
+
+ .footer-container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .footer-logo {
+     font-size: 1.8rem;
+     font-weight: 700;
+     margin-bottom: 1.5rem;
+     letter-spacing: 1px;
+ }
+
+ .footer-social {
+     display: flex;
+     justify-content: center;
+     margin-bottom: 1.5rem;
+ }
+
+ .social-icon {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: rgba(255, 255, 255, 0.1);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 10px;
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
+
+ .social-icon:hover {
+     background-color: rgba(255, 255, 255, 0.2);
+     transform: translateY(-3px);
+ }
+
+ .social-icon i {
+     color: white;
+     font-size: 1.2rem;
+ }
+
+ .footer-links {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-bottom: 1.5rem;
+ }
+
+ .footer-link {
+     margin: 0 15px;
+     color: rgba(255, 255, 255, 0.7);
+     text-decoration: none;
+     font-size: 0.95rem;
+     transition: color 0.3s ease;
+ }
+
+ .footer-link:hover {
+     color: white;
+ }
+
+ .footer-divider {
+     width: 80%;
+     height: 1px;
+     background-color: rgba(255, 255, 255, 0.1);
+     margin: 1rem auto;
+ }
+
+ .footer-copyright {
+     text-align: center;
+     color: rgba(255, 255, 255, 0.5);
+     font-size: 0.85rem;
+ }
+
+ /* Mobile responsiveness */
+ @media (max-width: 768px) {
+     .footer-links {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .footer-link {
+         margin: 5px 0;
+     }
  }
