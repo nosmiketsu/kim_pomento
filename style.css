@@ -12,10 +12,6 @@
      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
  }
 
- section {
-     background-color: white !important;
- }
-
  body {
      background-color: white;
      color: #212529;
@@ -275,9 +271,10 @@
      width: 100%;
      max-width: 100%;
      margin: 2.5rem auto;
-     padding: 0 1rem;
+     padding: 1rem 1rem;
      position: relative;
      user-select: none;
+     background-color: black;
  }
 
  /* Container for logos */
@@ -305,7 +302,7 @@
      align-items: center;
      padding: 0 0.5rem;
      cursor: default;
-     border: 1px solid black;
+     border: 1px solid white;
      margin: 0 .5rem;
      background-color: #000;
  }
