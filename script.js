@@ -42,7 +42,7 @@
                 autoPlayInterval = setInterval(() => {
                 let nextIndex = (currentIndex + 1) % totalSlides;
                 goToSlide(nextIndex);
-                }, 4000);
+                }, 2000);
             }
             function stopAutoPlay() {
                 clearInterval(autoPlayInterval);
