@@ -435,8 +435,8 @@
  .carousel-section {
      width: 100%;
      max-width: 100%;
-     margin: 2.5rem auto;
-     padding: 1rem 1rem;
+     margin: auto;
+     padding: 3rem 1rem;
      position: relative;
      user-select: none;
      border-top: solid 1px black;
