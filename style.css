@@ -500,6 +500,16 @@
      background-color: #333;
  }
 
+ @media (min-width: 769px) {
+     #dots-mobile {
+         display: none !important;
+     }
+
+     div#carouselTrack-dots-mobile {
+         display: none !important;
+     }
+ }
+
  /* Responsive adjustments */
  @media (max-width: 768px) {
      .carousel-container {
@@ -518,6 +528,14 @@
 
      .carousel-item .momstir-text {
          font-size: 2rem;
+     }
+
+     #dots-desktop {
+         display: none !important;
+     }
+
+     div#carouselTrackDesktop\ dots-desktop {
+         display: none !important;
      }
  }
 

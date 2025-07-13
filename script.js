@@ -6,7 +6,7 @@
 
 // carousel section 
         (function(){
-            const track = document.getElementById('carouselTrack');
+            const track = document.getElementById('carouselTrack-dots-mobile');
             const dots = document.querySelectorAll('.carousel-dot');
             const totalSlides = dots.length;
             let currentIndex = 0;
