@@ -164,12 +164,17 @@
      position: relative;
      width: 100%;
      min-height: 90vh;
-     margin-top: 80px;
+     /* margin-top: 80px; */
      display: flex;
      flex-direction: column;
      justify-content: center;
      overflow: hidden;
      padding: 2rem;
+ }
+
+ section#github {
+     min-height: auto !important;
+     margin-top: auto !important;
  }
 
  .hero-content {
@@ -327,6 +332,7 @@
 
      .hero {
          min-height: 70vh;
+         margin-top: 80px;
          text-align: center;
          padding: 1rem 1rem;
      }
