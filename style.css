@@ -533,7 +533,7 @@
      }
 
      .carousel-item {
-         flex: 0 0 100%;
+         flex: 0 0 55%;
          padding: 0 0.25rem;
          margin: auto;
      }
