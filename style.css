@@ -330,6 +330,10 @@
          display: block;
      }
 
+     .cta-button-mobile {
+         margin-bottom: 1rem;
+     }
+
      .hero {
          min-height: 70vh;
          margin-top: 80px;
