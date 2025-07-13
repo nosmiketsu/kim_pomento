@@ -11,6 +11,22 @@
     <script src="https://kit.fontawesome.com/ba4d4ecf6e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- The popup overlay and content -->
+    <div class="overlay" id="ageVerificationPopup">
+        <div class="popup">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <div class="warning-icon">!</div>
+            <h2>Age Verification</h2>
+            <div class="divider"></div>
+            <p>This website contains content intended for adults only. You must be 18 years or older to enter. By clicking "I'm 18 or Older" you confirm that you meet the age requirement.</p>
+            <div class="button-container">
+                <button class="btn btn-exit" id="exitBtn">I'm Under 18</button>
+                <button class="btn btn-enter" id="enterBtn">I'm 18 or Older</button>
+            </div>
+        </div>
+    </div>
+
     <header>
         <a href="/" class="logo">
             <i class="fa-brands fa-shopify fa-spin"></i>

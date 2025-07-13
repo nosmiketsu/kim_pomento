@@ -88,3 +88,47 @@
             checkScroll(); // Trigger on load if already in view
         });
             
+        // Popup Script 
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('ageVerificationPopup');
+            const exitBtn = document.getElementById('exitBtn');
+            const enterBtn = document.getElementById('enterBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const mainContent = document.getElementById('mainContent');
+            
+            // Store the verification status in localStorage
+            const isVerified = localStorage.getItem('ageVerified') === 'true';
+            
+            if (isVerified) {
+                popup.style.display = 'none';
+                mainContent.style.display = 'block';
+            } else {
+                popup.style.display = 'flex';
+            }
+
+            // Exit button redirects to a safe site
+            exitBtn.addEventListener('click', function() {
+                window.location.href = 'https://www.google.com';
+            });
+            
+            // Enter button hides the popup and shows content
+            enterBtn.addEventListener('click', function() {
+                popup.style.display = 'none';
+                mainContent.style.display = 'block';
+                localStorage.setItem('ageVerified', 'true');
+            });
+            
+            // Close button works only to acknowledge (can't dismiss without choice)
+            closeBtn.addEventListener('click', function() {
+                // We could animate the close or add sound here
+            });
+            
+            // Prevent closing with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    e.preventDefault();
+                    // Optional: Add a warning that this popup must be answered
+                }
+            });
+        });
