@@ -328,7 +328,7 @@
      .hero {
          min-height: 70vh;
          text-align: center;
-         padding: 4rem 1rem;
+         padding: 1rem 1rem;
      }
 
      section#github {
@@ -600,7 +600,7 @@
  @media (max-width: 768px) {
      .service-grid {
          grid-template-columns: 1fr;
-         gap: 1.5rem;
+         gap: 1rem !important;
      }
 
      .service-card {
@@ -621,11 +621,11 @@
      }
 
      .p-8 {
-         padding: 0;
+         padding: 0 !important;
      }
 
      .py-16 {
-         padding-top: 2rem;
+         padding-top: 1rem !important;
      }
 
      .mb-16 {
